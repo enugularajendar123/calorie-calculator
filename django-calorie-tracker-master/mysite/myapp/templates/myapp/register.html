@@ -1,0 +1,31 @@
+<html>
+    <head><title>registration form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script></head>
+<body style="background-color: aquamarine;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-dark bg-info">
+                    <span class="navbar-brand">Calorie Tracker</span>
+                    <a href="{% url 'index' %}" class="navbar-brand">Home</a>
+                    <a href="{% url 'register' %}" class="navbar-brand">login</a>
+                </nav>
+            </div>
+        </div>
+
+<h1> USERS FORM ENTRY </h1>
+<form method="POST">
+{% csrf_token %}
+<table cellpadding="10px",cellspacing=10px border="2px" style="align-content: center;background-color: beige;">
+{{ form.as_table }}
+</table>
+<br>
+<br>
+<a href="{% url 'index' %}"><input type="submit" value="Submit" style="padding: 10px;padding-right: 1=20px;margin-left: 200px;margin-top: px;"></a>
+</form>
+</body>
+</html>
+
+    
